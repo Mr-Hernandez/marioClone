@@ -11,7 +11,6 @@ Game::Game() : m_window(sf::Vector2u(1920,1080), "MariaClon")
     std::cout << m_timeInfo[0].asSeconds() << std::endl;
     std::cout << m_timeInfo[1].asSeconds() << std::endl;
     std::cout << m_timeInfo[2].asSeconds() << std::endl;
-    if(m_timeInfo[2] < m_timeInfo[1]){ std::cout << "boner" << std::endl;}
 }
 
 Game::~Game(){}
@@ -19,6 +18,7 @@ Game::~Game(){}
 
 void Game::Update(){
 
+    m_character.SetPlatPosition(m_map.GetPlatSize());
     m_character.Update(m_timeInfo);
 }
 

@@ -14,3 +14,9 @@ Next
 - investigate friction coming from map tiles
 - investigate character and map possible associations
 - get view to follow character
+Next
+- set up character model like what the origin is and size for quick reference
+- try making list of platforms and have many platforms
+- automatic tracking of platforms?
+- jump from any platform?
+- issue character getting teleported once under platform.

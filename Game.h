@@ -26,6 +26,7 @@ private:
     Map m_map;
     character m_character;
 
+
     // Timing
     sf::Clock m_clock;
     std::vector<sf::Time> m_timeInfo; //elapsed, frametime, tick
