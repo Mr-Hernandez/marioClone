@@ -1,0 +1,16 @@
+Goals for this session
+2/22
+- initialize Window instance using initializer list
+- Pass renderwindow to lower level classes so they can draw to it
+- Draw stuff to screen
+- Get original window size to Game instance.
+Next
+- Make Player class
+- add elapsed time to update somehow
+Next
+- Set up global timer and allow for multitimer
+- set up player controls with new timer
+Next
+- investigate friction coming from map tiles
+- investigate character and map possible associations
+- get view to follow character
