@@ -1,5 +1,6 @@
 #pragma once
 #include "SFML/Graphics.hpp"
+#include "EventManager.h"
 //#include <string>
 
 
@@ -11,7 +12,7 @@ public:
 
     // Getters
     sf::RenderWindow* GetRenderWindow();
-    void Draw(sf::Drawable& l_drawable);
+    EventManager* GetEventManager();
     bool IsDone();
     sf::Vector2u GetOrigWinSize();
 
@@ -20,12 +21,15 @@ public:
     void Render();
 
     // others
-
+    void Draw(sf::Drawable& l_drawable);
 
 
 private:
     sf::RenderWindow m_window;
     sf::Vector2u m_origWinSize;
     std::string m_windowName;
+    EventManager m_eventManager;
+    bool isDone;
+    sf::Event event;
 
 };

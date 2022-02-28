@@ -14,8 +14,6 @@ public:
     void Render(sf::RenderWindow& l_window);
 
     //Getter Setters
-//    void SetPlatPosition(const sf::Vector2f& l_size,
-//                         const std::vector<sf::Vector2f>& l_positions);
     void SetPlatPosition(sf::FloatRect l_platRect);
 private:
     sf::Texture m_charTexture;

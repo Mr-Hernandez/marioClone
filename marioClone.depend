@@ -1,28 +1,30 @@
 # depslib dependency file v1.0
-1645584208 source:d:\programming\c++\projects\codebloks\sfml-proj\sfml-proj-2\marioclone\window.cpp
+1646045888 source:d:\programming\c++\projects\codebloks\sfml-proj\sfml-proj-2\marioclone\window.cpp
 	"Window.h"
 	<iostream>
 
-1645583591 d:\programming\c++\projects\codebloks\sfml-proj\sfml-proj-2\marioclone\window.h
+1646043458 d:\programming\c++\projects\codebloks\sfml-proj\sfml-proj-2\marioclone\window.h
 	"SFML/Graphics.hpp"
+	"EventManager.h"
 
-1645623803 source:d:\programming\c++\projects\codebloks\sfml-proj\sfml-proj-2\marioclone\main.cpp
+1646045888 source:d:\programming\c++\projects\codebloks\sfml-proj\sfml-proj-2\marioclone\main.cpp
 	"SFML/Graphics.hpp"
 	"Game.h"
 
-1645721756 source:d:\programming\c++\projects\codebloks\sfml-proj\sfml-proj-2\marioclone\game.cpp
+1646042096 source:d:\programming\c++\projects\codebloks\sfml-proj\sfml-proj-2\marioclone\game.cpp
 	"Game.h"
 
-1645720008 d:\programming\c++\projects\codebloks\sfml-proj\sfml-proj-2\marioclone\game.h
+1646041696 d:\programming\c++\projects\codebloks\sfml-proj\sfml-proj-2\marioclone\game.h
 	"Window.h"
 	"SFML/Graphics.hpp"
 	<iostream>
 	"Map.h"
 	"character.h"
+	"EventManager.h"
 
-1645535395 d:\programming\c++\projects\codebloks\sfml-proj\sfml-proj-2\marioclone\eventmanager.h
+1646041546 d:\programming\c++\projects\codebloks\sfml-proj\sfml-proj-2\marioclone\eventmanager.h
 	<functional>
-	<unordered_map>
+	"SFML/Graphics.hpp"
 
 1645724136 d:\programming\c++\projects\codebloks\sfml-proj\sfml-proj-2\marioclone\map.h
 	"SFML/Graphics.hpp"
@@ -33,8 +35,11 @@
 1645723236 source:d:\programming\c++\projects\codebloks\sfml-proj\sfml-proj-2\marioclone\character.cpp
 	"character.h"
 
-1645721999 d:\programming\c++\projects\codebloks\sfml-proj\sfml-proj-2\marioclone\character.h
+1646040729 d:\programming\c++\projects\codebloks\sfml-proj\sfml-proj-2\marioclone\character.h
 	"SFML/Graphics.hpp"
 	<iostream>
 	<vector>
+
+1646042143 source:d:\programming\c++\projects\codebloks\sfml-proj\sfml-proj-2\marioclone\eventmanager.cpp
+	"EventManager.h"
 

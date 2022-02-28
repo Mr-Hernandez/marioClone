@@ -2,22 +2,26 @@
 
 Game::Game() : m_window(sf::Vector2u(1920,1080), "MariaClon")
 {
-    // I got the original size and store it, access like so
-    std::cout << m_window.GetOrigWinSize().x <<
-    " by " << m_window.GetOrigWinSize().y << std::endl;
+//    // I got the original size and store it, access like so
+//    std::cout << m_window.GetOrigWinSize().x <<
+//    " by " << m_window.GetOrigWinSize().y << std::endl;
+    // Setting callbacks
+    m_window.GetEventManager()->AddCallback(&Game::Tester, this);
+
+    // initializing time info
     m_timeInfo.push_back(sf::seconds(0.f));      // elapsed
     m_timeInfo.push_back(sf::seconds(1.f/60.f)); // frametime 1/60 prob
     m_timeInfo.push_back(sf::seconds(0.f));      // tick (sum of elapsed till > frametime)
-    std::cout << m_timeInfo[0].asSeconds() << std::endl;
-    std::cout << m_timeInfo[1].asSeconds() << std::endl;
-    std::cout << m_timeInfo[2].asSeconds() << std::endl;
+//    std::cout << m_timeInfo[0].asSeconds() << std::endl;
+//    std::cout << m_timeInfo[1].asSeconds() << std::endl;
+//    std::cout << m_timeInfo[2].asSeconds() << std::endl;
 }
 
 Game::~Game(){}
 
 
 void Game::Update(){
-
+    m_window.Update();
     m_character.SetPlatPosition(m_map.GetPlatSize());
     m_character.Update(m_timeInfo);
 }
@@ -26,6 +30,10 @@ void Game::Render(){
     m_map.Render(*m_window.GetRenderWindow());
     m_character.Render(*m_window.GetRenderWindow());
     m_window.Render();
+}
+
+void Game::Tester(EventDetails* l_details){
+    std::cout << "Tester Access" << std::endl;
 }
 
 // Getter Setters

@@ -20,3 +20,7 @@ Next
 - automatic tracking of platforms?
 - jump from any platform?
 - issue character getting teleported once under platform.
+- Eventmanager implementation
+Next
+- issues game won't turn off.
+- what does unsinged 32 hold

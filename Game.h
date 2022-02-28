@@ -3,6 +3,7 @@
 #include <iostream>
 #include "Map.h"
 #include "character.h"
+#include "EventManager.h"
 
 
 class Game{
@@ -20,6 +21,8 @@ public:
     // Timing
     void RestartClock();
 
+    // Others
+    void Tester(EventDetails* l_details);
 
 private:
     Window m_window;
