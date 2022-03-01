@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1646045888 source:d:\programming\c++\projects\codebloks\sfml-proj\sfml-proj-2\marioclone\window.cpp
+1646151023 source:d:\programming\c++\projects\codebloks\sfml-proj\sfml-proj-2\marioclone\window.cpp
 	"Window.h"
 	<iostream>
 
@@ -22,9 +22,10 @@
 	"character.h"
 	"EventManager.h"
 
-1646041546 d:\programming\c++\projects\codebloks\sfml-proj\sfml-proj-2\marioclone\eventmanager.h
+1646151037 d:\programming\c++\projects\codebloks\sfml-proj\sfml-proj-2\marioclone\eventmanager.h
 	<functional>
 	"SFML/Graphics.hpp"
+	<iostream>
 
 1645724136 d:\programming\c++\projects\codebloks\sfml-proj\sfml-proj-2\marioclone\map.h
 	"SFML/Graphics.hpp"
@@ -40,6 +41,6 @@
 	<iostream>
 	<vector>
 
-1646042143 source:d:\programming\c++\projects\codebloks\sfml-proj\sfml-proj-2\marioclone\eventmanager.cpp
+1646151023 source:d:\programming\c++\projects\codebloks\sfml-proj\sfml-proj-2\marioclone\eventmanager.cpp
 	"EventManager.h"
 

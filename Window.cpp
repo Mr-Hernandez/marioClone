@@ -44,14 +44,14 @@ EventManager* Window::GetEventManager(){ return &m_eventManager;}
 void Window::Draw(sf::Drawable& l_drawable){ m_window.draw(l_drawable);}
 
 void Window::Update(){
-//    sf::Event event;
+//    sf::Event event; // probably better make event here
     m_window.pollEvent(event);
     if(event.type == sf::Event::Closed){
         isDone = true;
         std::cout << "closing" << std::endl;
     }
-    std::cout << event.type << std::endl;
-    m_eventManager.HandleEvent();
+//    std::cout << event.type << std::endl;
+    m_eventManager.HandleEvent(event);
 }
 
 void Window::Render(){

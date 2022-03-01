@@ -1,6 +1,7 @@
 #pragma once
 #include <functional>
 #include "SFML/Graphics.hpp"
+#include <iostream>
 
 struct EventDetails{
 int tmp = 1;
@@ -16,7 +17,10 @@ public:
     }
 
     void IssueCallback();
-    void HandleEvent();
+    void HandleEvent(sf::Event l_event);
+
+    // getters and setters
+//    void SetEvent(sf::Event l_event);
 private:
     std::function<void(EventDetails*)> callback;
     EventDetails m_details;

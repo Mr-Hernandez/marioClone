@@ -22,5 +22,5 @@ Next
 - issue character getting teleported once under platform.
 - Eventmanager implementation
 Next
-- issues game won't turn off.
-- what does unsinged 32 hold
+- issues game won't turn off. - fixed
+- what does unsinged 32 hold -
