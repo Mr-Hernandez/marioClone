@@ -72,7 +72,7 @@ void character::Update(std::vector<sf::Time>& l_timeInfo){
         // speed physics
         m_dP.x += m_ddP.x;
         m_P.x += m_dP.x;
-        m_charSprite.setPosition(m_P);
+//        m_charSprite.setPosition(m_P);
         m_ddP.y = 1.f; // gravity, always, could import from map eventually
         m_dP.y += m_ddP.y;
         m_P.y += m_dP.y;
@@ -86,8 +86,9 @@ void character::Update(std::vector<sf::Time>& l_timeInfo){
             m_P.x < m_platInfo.left + m_platInfo.width * 2){
             if(m_P.y > 508){m_P.y = 508; m_dP.y = 0.f;} // land on platform
         }
-//        Move();
-//        Jump();
+
+        // Set Position of character
+        m_charSprite.setPosition(m_P);
     }
 
     ResetActions();
