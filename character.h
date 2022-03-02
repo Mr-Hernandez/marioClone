@@ -2,6 +2,7 @@
 #include "SFML/Graphics.hpp"
 #include <iostream>
 #include <vector>
+#include "EventManager.h"
 
 struct TimeInfo;
 
@@ -15,13 +16,19 @@ public:
 
     //Getter Setters
     void SetPlatPosition(sf::FloatRect l_platRect);
+
+    // character actions
+    void SetJump(EventDetails* l_details);
+    void SetMoveRight(EventDetails* l_details);
+    void ResetActions();
+
+
 private:
     sf::Texture m_charTexture;
     sf::Sprite m_charSprite;
 
     // character actions
     void Move();
-    void Jump();
 
     // character properties
     sf::Vector2f m_P;
@@ -33,5 +40,12 @@ private:
     sf::FloatRect m_platInfo;
     sf::Vector2f m_platSize;
     std::vector<sf::Vector2f> m_platPositions;
+
+    // bools
+    bool isJump;
+    bool isMoveR;
+    bool isMoveL;
+    bool isMoveU;
+    bool isMoveD;
 
 };

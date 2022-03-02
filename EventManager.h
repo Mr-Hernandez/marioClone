@@ -4,7 +4,8 @@
 #include <iostream>
 
 struct EventDetails{
-int tmp = 1;
+int m_code = -1;
+sf::Event s_event;
 };
 
 class EventManager{
@@ -20,7 +21,7 @@ public:
     void HandleEvent(sf::Event l_event);
 
     // getters and setters
-//    void SetEvent(sf::Event l_event);
+    void SetEvent(sf::Event* l_event);
 private:
     std::function<void(EventDetails*)> callback;
     EventDetails m_details;

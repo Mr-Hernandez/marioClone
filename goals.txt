@@ -24,3 +24,10 @@ Next
 Next
 - issues game won't turn off. - fixed
 - what does unsinged 32 hold -
+Next
+- set up a way to make event calls work as injections while system continues - done
+Next
+- Create multiple callbacks and a way to call them correctly on key input
+- For above, need to make key input easier than writing if else statements of buttons
+
+

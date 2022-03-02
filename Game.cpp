@@ -7,7 +7,8 @@ Game::Game() : m_window(sf::Vector2u(1920,1080), "MariaClon")
 //    " by " << m_window.GetOrigWinSize().y << std::endl;
     // Setting callbacks
     m_window.GetEventManager()->AddCallback(&Game::Tester, this);
-
+    m_window.GetEventManager()->AddCallback(&character::SetJump, &m_character); // this works
+    m_window.GetEventManager()->AddCallback(&character::SetMoveRight, &m_character);
     // initializing time info
     m_timeInfo.push_back(sf::seconds(0.f));      // elapsed
     m_timeInfo.push_back(sf::seconds(1.f/60.f)); // frametime 1/60 prob
@@ -33,7 +34,7 @@ void Game::Render(){
 }
 
 void Game::Tester(EventDetails* l_details){
-    std::cout << "Tester Access" << std::endl;
+    std::cout << "Tester Access----------------------------" << std::endl;
 }
 
 // Getter Setters
@@ -44,9 +45,9 @@ void Game::RestartClock(){
     if(m_timeInfo[2] >= m_timeInfo[1]){ m_timeInfo[2] = sf::seconds(0);}
     m_timeInfo[0] = m_clock.restart(); // elapsed time
     m_timeInfo[2] += m_timeInfo[0]; // sum of elapsed time
-//    std::cout << m_timeInfo[0].asSeconds() << std::endl;
+//    std::cout << "elapsed: " << m_timeInfo[0].asSeconds() << std::endl;
 //    std::cout << m_timeInfo[1].asSeconds() << std::endl;
-//    std::cout << m_timeInfo[2].asSeconds() << std::endl;
+//    std::cout << "tick:   " << m_timeInfo[2].asSeconds() << std::endl;
 
 }
 

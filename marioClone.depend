@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1646151023 source:d:\programming\c++\projects\codebloks\sfml-proj\sfml-proj-2\marioclone\window.cpp
+1646211340 source:d:\programming\c++\projects\codebloks\sfml-proj\sfml-proj-2\marioclone\window.cpp
 	"Window.h"
 	<iostream>
 
@@ -11,7 +11,7 @@
 	"SFML/Graphics.hpp"
 	"Game.h"
 
-1646042096 source:d:\programming\c++\projects\codebloks\sfml-proj\sfml-proj-2\marioclone\game.cpp
+1646210962 source:d:\programming\c++\projects\codebloks\sfml-proj\sfml-proj-2\marioclone\game.cpp
 	"Game.h"
 
 1646041696 d:\programming\c++\projects\codebloks\sfml-proj\sfml-proj-2\marioclone\game.h
@@ -22,7 +22,7 @@
 	"character.h"
 	"EventManager.h"
 
-1646151037 d:\programming\c++\projects\codebloks\sfml-proj\sfml-proj-2\marioclone\eventmanager.h
+1646209834 d:\programming\c++\projects\codebloks\sfml-proj\sfml-proj-2\marioclone\eventmanager.h
 	<functional>
 	"SFML/Graphics.hpp"
 	<iostream>
@@ -33,14 +33,15 @@
 1645724203 source:d:\programming\c++\projects\codebloks\sfml-proj\sfml-proj-2\marioclone\map.cpp
 	"Map.h"
 
-1645723236 source:d:\programming\c++\projects\codebloks\sfml-proj\sfml-proj-2\marioclone\character.cpp
+1646211113 source:d:\programming\c++\projects\codebloks\sfml-proj\sfml-proj-2\marioclone\character.cpp
 	"character.h"
 
-1646040729 d:\programming\c++\projects\codebloks\sfml-proj\sfml-proj-2\marioclone\character.h
+1646210962 d:\programming\c++\projects\codebloks\sfml-proj\sfml-proj-2\marioclone\character.h
 	"SFML/Graphics.hpp"
 	<iostream>
 	<vector>
+	"EventManager.h"
 
-1646151023 source:d:\programming\c++\projects\codebloks\sfml-proj\sfml-proj-2\marioclone\eventmanager.cpp
+1646211355 source:d:\programming\c++\projects\codebloks\sfml-proj\sfml-proj-2\marioclone\eventmanager.cpp
 	"EventManager.h"
 

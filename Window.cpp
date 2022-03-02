@@ -51,6 +51,7 @@ void Window::Update(){
         std::cout << "closing" << std::endl;
     }
 //    std::cout << event.type << std::endl;
+    m_eventManager.SetEvent(&event);
     m_eventManager.HandleEvent(event);
 }
 
