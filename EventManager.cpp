@@ -1,9 +1,52 @@
 #include "EventManager.h"
 
-EventManager::EventManager(){
+EventManager::EventManager()
+{
+    LoadBindings();
 
 }
 
+void EventManager::LoadBindings(){
+
+    // open a file and check if it was opened
+    std::ifstream bindFile("Resources/files/keys.cfg");
+    if(bindFile.is_open()){
+        std::cout << "Loaded keys.cfg" << std::endl;
+    } else {
+        std::cout << "Failed to load keys.cfg" << std::endl;
+        return;
+    }
+
+    std::string delimiter = ":";
+    std::string line;
+    while(std::getline(bindFile, line)){
+        std::stringstream keystream(line);
+        std::string callbackName;
+        keystream >> callbackName;
+        // create new binding here
+        std::cout << "callbackName: " << callbackName;
+
+        // now while not at end of file of keystream
+        // we get event and key input codes in the form (#:# #:# ....)
+        while(!keystream.eof()){
+            std::string keyVal;
+            keystream >> keyVal;
+            if(keystream.fail()){
+                keystream.clear();
+                break;
+            }
+            int start = 0;
+            int last = keyVal.find(delimiter);
+            int type = std::stoi(keyVal.substr(start, last - start));
+            int code = std::stoi(keyVal.substr(last + delimiter.length(),
+                keyVal.find(delimiter, last + delimiter.length())));
+            std::cout << " type: " << type << " code: " << code << std::endl;
+        }
+
+
+    }
+    bindFile.close();
+}
 
 
 

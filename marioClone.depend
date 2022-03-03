@@ -22,10 +22,13 @@
 	"character.h"
 	"EventManager.h"
 
-1646209834 d:\programming\c++\projects\codebloks\sfml-proj\sfml-proj-2\marioclone\eventmanager.h
+1646324231 d:\programming\c++\projects\codebloks\sfml-proj\sfml-proj-2\marioclone\eventmanager.h
 	<functional>
 	"SFML/Graphics.hpp"
 	<iostream>
+	<fstream>
+	<sstream>
+	<string>
 
 1645724136 d:\programming\c++\projects\codebloks\sfml-proj\sfml-proj-2\marioclone\map.h
 	"SFML/Graphics.hpp"
@@ -33,7 +36,7 @@
 1645724203 source:d:\programming\c++\projects\codebloks\sfml-proj\sfml-proj-2\marioclone\map.cpp
 	"Map.h"
 
-1646211113 source:d:\programming\c++\projects\codebloks\sfml-proj\sfml-proj-2\marioclone\character.cpp
+1646212843 source:d:\programming\c++\projects\codebloks\sfml-proj\sfml-proj-2\marioclone\character.cpp
 	"character.h"
 
 1646210962 d:\programming\c++\projects\codebloks\sfml-proj\sfml-proj-2\marioclone\character.h
@@ -42,6 +45,6 @@
 	<vector>
 	"EventManager.h"
 
-1646211355 source:d:\programming\c++\projects\codebloks\sfml-proj\sfml-proj-2\marioclone\eventmanager.cpp
+1646324634 source:d:\programming\c++\projects\codebloks\sfml-proj\sfml-proj-2\marioclone\eventmanager.cpp
 	"EventManager.h"
 

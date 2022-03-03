@@ -2,6 +2,9 @@
 #include <functional>
 #include "SFML/Graphics.hpp"
 #include <iostream>
+#include <fstream>
+#include <sstream> // necessary for stringstream
+#include <string> // for stoi
 
 struct EventDetails{
 int m_code = -1;
@@ -17,6 +20,7 @@ public:
         callback = temp;
     }
 
+    void LoadBindings();
     void IssueCallback();
     void HandleEvent(sf::Event l_event);
 
