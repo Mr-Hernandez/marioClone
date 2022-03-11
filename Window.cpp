@@ -45,14 +45,23 @@ void Window::Draw(sf::Drawable& l_drawable){ m_window.draw(l_drawable);}
 
 void Window::Update(){
 //    sf::Event event; // probably better make event here
-    m_window.pollEvent(event);
-    if(event.type == sf::Event::Closed){
-        isDone = true;
-        std::cout << "closing" << std::endl;
+    while(m_window.pollEvent(event)){
+        if(event.type == sf::Event::Closed){
+            isDone = true;
+        }
+        m_eventManager.HandleEvent(event);
     }
-//    std::cout << event.type << std::endl;
-    m_eventManager.SetEvent(&event);
-    m_eventManager.HandleEvent(event);
+    m_eventManager.Update();
+
+//    m_window.pollEvent(event);
+//    if(event.type == sf::Event::Closed){
+//        isDone = true;
+//        std::cout << "closing" << std::endl;
+//    }
+////    std::cout << event.type << std::endl;
+////    m_eventManager.SetEvent(&event);
+//    m_eventManager.HandleEvent(event);
+//    m_eventManager.Update();
 }
 
 void Window::Render(){

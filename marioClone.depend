@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1646211340 source:d:\programming\c++\projects\codebloks\sfml-proj\sfml-proj-2\marioclone\window.cpp
+1646783733 source:d:\programming\c++\projects\codebloks\sfml-proj\sfml-proj-2\marioclone\window.cpp
 	"Window.h"
 	<iostream>
 
@@ -11,7 +11,7 @@
 	"SFML/Graphics.hpp"
 	"Game.h"
 
-1646210962 source:d:\programming\c++\projects\codebloks\sfml-proj\sfml-proj-2\marioclone\game.cpp
+1646785010 source:d:\programming\c++\projects\codebloks\sfml-proj\sfml-proj-2\marioclone\game.cpp
 	"Game.h"
 
 1646041696 d:\programming\c++\projects\codebloks\sfml-proj\sfml-proj-2\marioclone\game.h
@@ -22,13 +22,13 @@
 	"character.h"
 	"EventManager.h"
 
-1646324231 d:\programming\c++\projects\codebloks\sfml-proj\sfml-proj-2\marioclone\eventmanager.h
+1646783471 d:\programming\c++\projects\codebloks\sfml-proj\sfml-proj-2\marioclone\eventmanager.h
 	<functional>
-	"SFML/Graphics.hpp"
-	<iostream>
+	<unordered_map>
 	<fstream>
+	<iostream>
 	<sstream>
-	<string>
+	"SFML/Graphics.hpp"
 
 1645724136 d:\programming\c++\projects\codebloks\sfml-proj\sfml-proj-2\marioclone\map.h
 	"SFML/Graphics.hpp"
@@ -36,15 +36,15 @@
 1645724203 source:d:\programming\c++\projects\codebloks\sfml-proj\sfml-proj-2\marioclone\map.cpp
 	"Map.h"
 
-1646212843 source:d:\programming\c++\projects\codebloks\sfml-proj\sfml-proj-2\marioclone\character.cpp
+1646785339 source:d:\programming\c++\projects\codebloks\sfml-proj\sfml-proj-2\marioclone\character.cpp
 	"character.h"
 
-1646210962 d:\programming\c++\projects\codebloks\sfml-proj\sfml-proj-2\marioclone\character.h
+1646785301 d:\programming\c++\projects\codebloks\sfml-proj\sfml-proj-2\marioclone\character.h
 	"SFML/Graphics.hpp"
 	<iostream>
 	<vector>
 	"EventManager.h"
 
-1646324634 source:d:\programming\c++\projects\codebloks\sfml-proj\sfml-proj-2\marioclone\eventmanager.cpp
+1646783471 source:d:\programming\c++\projects\codebloks\sfml-proj\sfml-proj-2\marioclone\eventmanager.cpp
 	"EventManager.h"
 

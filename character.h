@@ -19,7 +19,7 @@ public:
 
     // character actions
     void SetJump(EventDetails* l_details);
-    void SetMoveRight(EventDetails* l_details);
+    void SetMove();
     void ResetActions();
 
 

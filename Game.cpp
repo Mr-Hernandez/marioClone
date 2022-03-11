@@ -6,9 +6,9 @@ Game::Game() : m_window(sf::Vector2u(1920,1080), "MariaClon")
 //    std::cout << m_window.GetOrigWinSize().x <<
 //    " by " << m_window.GetOrigWinSize().y << std::endl;
     // Setting callbacks
-    m_window.GetEventManager()->AddCallback(&Game::Tester, this);
-    m_window.GetEventManager()->AddCallback(&character::SetJump, &m_character); // this works
-    m_window.GetEventManager()->AddCallback(&character::SetMoveRight, &m_character);
+    m_window.GetEventManager()->AddCallback("Tester", &Game::Tester, this);
+    m_window.GetEventManager()->AddCallback("SetJump", &character::SetJump, &m_character); // this works
+//    m_window.GetEventManager()->AddCallback("MoveR", &character::SetMoveRight, &m_character);
     // initializing time info
     m_timeInfo.push_back(sf::seconds(0.f));      // elapsed
     m_timeInfo.push_back(sf::seconds(1.f/60.f)); // frametime 1/60 prob
