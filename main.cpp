@@ -1,5 +1,10 @@
 #include "SFML/Graphics.hpp"
 #include "Game.h"
+#include <iostream>
+
+struct myStruct{
+    int x = 1;
+};
 
 int main(){
 
@@ -9,6 +14,18 @@ int main(){
         game.Render();
         game.RestartClock();
     }
+//for(int i = 0; i < 5; i++){
+//    myStruct* S = new myStruct();
+//    std::cout << S->x << std::endl;
+//    S = nullptr;
+//}
+//myStruct* S = new myStruct();
+//std::cout << S->x << std::endl;
+//S = nullptr;
+//myStruct* S = new myStruct();
+//std::cout << S->x << std::endl;
+
+
 //    Window window;
 //    while(window.IsDone()){
 //        window.Render();
