@@ -71,6 +71,10 @@ void Window::Render(){
     // or something maybe.
 }
 
+void Window::BeginDraw(){
+    m_window.clear(sf::Color::Blue);
+}
+
 // others
 
 

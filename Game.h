@@ -4,6 +4,9 @@
 #include "Map.h"
 #include "character.h"
 #include "EventManager.h"
+#include "StateManager.h"
+#include "SharedContext.h"
+
 
 
 class Game{
@@ -17,6 +20,7 @@ public:
     // Loop
     void Update();
     void Render();
+    void LateUpdate();
 
     // Timing
     void RestartClock();
@@ -24,10 +28,13 @@ public:
     // Others
     void Tester(EventDetails* l_details);
 
+
 private:
     Window m_window;
     Map m_map;
     character m_character;
+    StateManager m_stateManager;
+    SharedContext m_context;
 
 
     // Timing

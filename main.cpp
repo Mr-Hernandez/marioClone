@@ -12,7 +12,7 @@ int main(){
     while(!game.GetWindow()->IsDone()){
         game.Update();
         game.Render();
-        game.RestartClock();
+        game.LateUpdate();
     }
 //for(int i = 0; i < 5; i++){
 //    myStruct* S = new myStruct();

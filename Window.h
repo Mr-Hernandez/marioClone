@@ -22,6 +22,7 @@ public:
 
     // others
     void Draw(sf::Drawable& l_drawable);
+    void BeginDraw();
 
 
 private:

@@ -31,6 +31,7 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="BaseState.h" />
 		<Unit filename="EventManager.cpp" />
 		<Unit filename="EventManager.h" />
 		<Unit filename="Game.cpp" />
@@ -38,6 +39,11 @@
 		<Unit filename="Input.h" />
 		<Unit filename="Map.cpp" />
 		<Unit filename="Map.h" />
+		<Unit filename="SharedContext.h" />
+		<Unit filename="StateManager.cpp" />
+		<Unit filename="StateManager.h" />
+		<Unit filename="Test.cpp" />
+		<Unit filename="Test.h" />
 		<Unit filename="Window.cpp" />
 		<Unit filename="Window.h" />
 		<Unit filename="character.cpp" />
