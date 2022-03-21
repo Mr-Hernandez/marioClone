@@ -48,10 +48,13 @@ void character::ResetActions(){
     isMoveD = false;
 }
 
-void character::Update(std::vector<sf::Time>& l_timeInfo){
-
+//void character::Update(std::vector<sf::Time>& l_timeInfo){
+void character::Update(const sf::Time& l_time){
+    float frametime = 1.f/60.f; // temp
+    // currently l_time is sum of elapsed times, will probably change later
     // Tick
-    if(l_timeInfo[2].asSeconds() >= l_timeInfo[1].asSeconds())
+//    if(l_timeInfo[2].asSeconds() >= l_timeInfo[1].asSeconds())
+    if(l_time.asSeconds() >= frametime)
     {
         // Jump
         SetMove();

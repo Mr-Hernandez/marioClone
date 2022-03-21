@@ -3,14 +3,11 @@
 #include "BaseState.h"
 #include "EventManager.h"
 #include "SFML/Graphics.hpp"
-#include "Obj.h"
-#include "character.h"
-#include "Map.h"
 
-class Test : public BaseState{
+class Test2 : public BaseState{
 public:
-    Test(StateManager* l_stateManager);
-    ~Test();
+    Test2(StateManager* l_stateManager);
+    ~Test2();
 
     void OnCreate();
     void OnDestroy();
@@ -21,10 +18,8 @@ public:
     void Update(const sf::Time& l_time);
     void Draw();
 
+    void Continue(EventDetails* l_details);
     void Tester(EventDetails* l_details);
-    void GoBack(EventDetails* l_details);
 private:
-    Obj obj1;
-    character m_character;
-    Map m_map;
+
 };

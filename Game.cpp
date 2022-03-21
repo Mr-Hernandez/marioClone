@@ -30,7 +30,7 @@ Game::~Game(){}
 
 void Game::Update(){
     m_window.Update();
-    m_stateManager.Update(m_timeInfo[0]);
+    m_stateManager.Update(m_timeInfo[2]);
 //    m_character.SetPlatPosition(m_map.GetPlatSize());
 //    m_character.Update(m_timeInfo);
 }

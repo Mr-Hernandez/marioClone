@@ -11,7 +11,8 @@ public:
     character();
     ~character();
 
-    void Update(std::vector<sf::Time>& l_timeInfo);
+//    void Update(std::vector<sf::Time>& l_timeInfo);
+    void Update(const sf::Time& l_time);
     void Render(sf::RenderWindow& l_window);
 
     //Getter Setters
