@@ -21,7 +21,7 @@ Game::Game() : m_window(sf::Vector2u(1920,1080), "MariaClon"),
 
     m_context.m_wind = &m_window;
     m_context.m_eventManager = m_window.GetEventManager();
-    m_stateManager.SwitchTo(StateType::Test);
+    m_stateManager.SwitchTo(StateType::StateIntro);
 //    m_context.m_eventManager->AddCallback(StateType::Test, "Tester", &Game::Tester, this);
 }
 

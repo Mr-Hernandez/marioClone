@@ -4,14 +4,17 @@
 #include <unordered_map>
 #include <functional>
 #include "SharedContext.h"
+
 #include "BaseState.h"
-#include "Test.h"
-#include "Test2.h"
+//#include "Test.h"
+//#include "Test2.h"
+#include "StateGame.h"
+#include "StateIntro.h"
 
 
 
 enum class StateType{
-    Intro = 1, MainMenu, Game, Paused, GameOver, Credits, Test, Test2
+    StateIntro = 1, MainMenu, Game, Paused, GameOver, Credits, StateGame
 };
 
 using StateContainer = std::vector<std::pair<StateType, BaseState*>>;
