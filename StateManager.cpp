@@ -3,14 +3,8 @@
 StateManager::StateManager(SharedContext* l_shared)
     : m_shared(l_shared)
 {
-//    RegisterState<Test>(StateType::Test);
-//    RegisterState<Test2>(StateType::Test2);
     RegisterState<StateIntro>(StateType::StateIntro);
     RegisterState<StateGame>(StateType::StateGame);
-//    RegisterState<State_Intro>(StateType::Intro);
-//    RegisterState<State_MainMenu>(StateType::MainMenu);
-//    RegisterState<State_Game>(StateType::Game);
-//    RegisterState<State_Paused>(StateType::Paused);
 }
 
 StateManager::~StateManager(){
@@ -35,6 +29,8 @@ void StateManager::Draw(){
             --itr;
         }
         for(; itr != m_states.end(); ++itr){
+            m_shared->m_wind->GetRenderWindow()->
+                setView(itr->second->GetView());
             itr->second->Draw();
         }
     } else {
@@ -99,18 +95,22 @@ void StateManager::SwitchTo(const StateType& l_type){
             m_states.erase(itr);
             m_states.emplace_back(tmp_type, tmp_state);
             tmp_state->Activate();
+            m_shared->m_wind->GetRenderWindow()->setView(tmp_state->GetView());
             return;
         }
     }
     if(!m_states.empty()){ m_states.back().second->Deactivate();}
     CreateState(l_type);
     m_states.back().second->Activate();
+    m_shared->m_wind->GetRenderWindow()->
+        setView(m_states.back().second->GetView());
 }
 
 void StateManager::CreateState(const StateType& l_type){
     auto newState = m_stateFactory.find(l_type);
     if(newState == m_stateFactory.end()){ return;}
     BaseState* state = newState->second();
+    state->m_view = m_shared->m_wind->GetRenderWindow()->getDefaultView();
     m_states.emplace_back(l_type, state);
     state->OnCreate();
 }

@@ -43,7 +43,7 @@ private:
     std::vector<sf::Vector2f> m_platPositions;
 
     // bools
-    bool isJump;
+    bool isJump = false;
     bool isMoveR;
     bool isMoveL;
     bool isMoveU;

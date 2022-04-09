@@ -14,6 +14,7 @@ void StateGame::OnCreate(){
 
 void StateGame::OnDestroy(){
     EventManager* evMgr = m_stateMgr->GetContext()->m_eventManager;
+    evMgr->RemoveCallback(StateType::StateGame, "SetJump");
 //    evMgr->RemoveCallback(StateType::Test,"Tester");
 }
 

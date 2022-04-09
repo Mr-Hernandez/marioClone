@@ -6,8 +6,6 @@
 #include "SharedContext.h"
 
 #include "BaseState.h"
-//#include "Test.h"
-//#include "Test2.h"
 #include "StateGame.h"
 #include "StateIntro.h"
 

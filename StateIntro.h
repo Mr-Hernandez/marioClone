@@ -20,5 +20,6 @@ public:
 
     void Continue(EventDetails* l_details);
 private:
-
+    sf::Texture m_texture;
+    sf::Sprite m_sprite;
 };

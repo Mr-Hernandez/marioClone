@@ -2,9 +2,6 @@
 #include "Game.h"
 #include <iostream>
 
-struct myStruct{
-    int x = 1;
-};
 
 int main(){
 

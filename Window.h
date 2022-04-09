@@ -15,6 +15,7 @@ public:
     EventManager* GetEventManager();
     bool IsDone();
     sf::Vector2u GetOrigWinSize();
+    sf::FloatRect GetViewSpace();
 
     // Loop
     void Update();
