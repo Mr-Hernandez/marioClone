@@ -16,30 +16,30 @@ character::character(){
 
 character::~character(){}
 
-void character::Move(){
-//    if(sf::Keyboard::isKeyPressed(sf::Keyboard::A)){
-//        m_ddP.x = -1.f;
-//    }
-//    else if(sf::Keyboard::isKeyPressed(sf::Keyboard::D)){
-//        m_ddP.x = 1.f;
-//    } else {
-//        m_ddP.x = 0.f;
-//        if(m_dP.x != 0){
-//            if(m_dP.x < 0){ m_dP.x += friction;}
-//            else { m_dP.x -= friction;}
-//        }
-//    }
-//
-//    m_dP.x += m_ddP.x;
-//    m_P.x += m_dP.x;
-//    m_charSprite.setPosition(m_P);
-//    if(m_dP.x > 10.f){ m_dP.x = 10.f;}
-//    else if(m_dP.x < -10.f){ m_dP.x = -10.f;}
-
+void character::SetJump(EventDetails* l_details){
+    isJump = true;
+    std::cout << "setting Jump" << std::endl;
 }
 
-void character::SetJump(EventDetails* l_details){ isJump = true;}
-void character::SetMoveRight(EventDetails* l_details){ isMoveR = true;}
+void character::SetMove(){
+    if(sf::Keyboard::isKeyPressed(sf::Keyboard::D)){
+        isMoveR = true;
+        isMoveL = false;
+    }
+    if(sf::Keyboard::isKeyPressed(sf::Keyboard::A)){
+        isMoveR = false;
+        isMoveL = true;
+    }
+    if(sf::Keyboard::isKeyPressed(sf::Keyboard::W)){
+        isMoveU = true;
+        isMoveD = false;
+    }
+    if(sf::Keyboard::isKeyPressed(sf::Keyboard::S)){
+        isMoveU = false;
+        isMoveD = true;
+    }
+}
+
 void character::ResetActions(){
     isJump = false;
     isMoveR = false;
@@ -48,12 +48,16 @@ void character::ResetActions(){
     isMoveD = false;
 }
 
-void character::Update(std::vector<sf::Time>& l_timeInfo){
-
+//void character::Update(std::vector<sf::Time>& l_timeInfo){
+void character::Update(const sf::Time& l_time){
+    float frametime = 1.f/60.f; // temp
+    // currently l_time is sum of elapsed times, will probably change later
     // Tick
-    if(l_timeInfo[2].asSeconds() >= l_timeInfo[1].asSeconds())
+//    if(l_timeInfo[2].asSeconds() >= l_timeInfo[1].asSeconds())
+    if(l_time.asSeconds() >= frametime)
     {
         // Jump
+        SetMove();
         if(m_P.y == 508 && isJump){ // if grounded, then jump
             m_dP.y = -10.f;
         }
@@ -89,9 +93,11 @@ void character::Update(std::vector<sf::Time>& l_timeInfo){
 
         // Set Position of character
         m_charSprite.setPosition(m_P);
+
+        ResetActions();
     }
 
-    ResetActions();
+//    ResetActions();
 
 }
 

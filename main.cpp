@@ -1,5 +1,7 @@
 #include "SFML/Graphics.hpp"
 #include "Game.h"
+#include <iostream>
+
 
 int main(){
 
@@ -7,8 +9,20 @@ int main(){
     while(!game.GetWindow()->IsDone()){
         game.Update();
         game.Render();
-        game.RestartClock();
+        game.LateUpdate();
     }
+//for(int i = 0; i < 5; i++){
+//    myStruct* S = new myStruct();
+//    std::cout << S->x << std::endl;
+//    S = nullptr;
+//}
+//myStruct* S = new myStruct();
+//std::cout << S->x << std::endl;
+//S = nullptr;
+//myStruct* S = new myStruct();
+//std::cout << S->x << std::endl;
+
+
 //    Window window;
 //    while(window.IsDone()){
 //        window.Render();

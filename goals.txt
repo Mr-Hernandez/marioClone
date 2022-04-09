@@ -29,5 +29,10 @@ Next
 Next
 - Create multiple callbacks and a way to call them correctly on key input
 - For above, need to make key input easier than writing if else statements of buttons
-
+Next
+- Movement needs to be read in that instant so I can't use the event manager keypressed method
+- ???
+Next
+- maybe change the time i'm passing down to the update stuff
+- Rewrite states class and set up correct input
 

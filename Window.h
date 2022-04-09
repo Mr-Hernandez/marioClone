@@ -15,6 +15,7 @@ public:
     EventManager* GetEventManager();
     bool IsDone();
     sf::Vector2u GetOrigWinSize();
+    sf::FloatRect GetViewSpace();
 
     // Loop
     void Update();
@@ -22,6 +23,7 @@ public:
 
     // others
     void Draw(sf::Drawable& l_drawable);
+    void BeginDraw();
 
 
 private:

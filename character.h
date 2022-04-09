@@ -11,7 +11,8 @@ public:
     character();
     ~character();
 
-    void Update(std::vector<sf::Time>& l_timeInfo);
+//    void Update(std::vector<sf::Time>& l_timeInfo);
+    void Update(const sf::Time& l_time);
     void Render(sf::RenderWindow& l_window);
 
     //Getter Setters
@@ -19,7 +20,7 @@ public:
 
     // character actions
     void SetJump(EventDetails* l_details);
-    void SetMoveRight(EventDetails* l_details);
+    void SetMove();
     void ResetActions();
 
 
@@ -42,7 +43,7 @@ private:
     std::vector<sf::Vector2f> m_platPositions;
 
     // bools
-    bool isJump;
+    bool isJump = false;
     bool isMoveR;
     bool isMoveL;
     bool isMoveU;
