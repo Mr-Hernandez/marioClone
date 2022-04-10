@@ -35,4 +35,7 @@ Next
 Next
 - maybe change the time i'm passing down to the update stuff
 - Rewrite states class and set up correct input
+Next
+- Write the .cfg file containing the texture assets list or paths or w/e
+- texture manager and sprite sheet stuff for animation
 

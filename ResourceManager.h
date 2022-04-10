@@ -1,8 +1,9 @@
 #pragma once
 
-#include <Utilites.h>
+#include "Utilites.h"
 #include <sstream>
 #include <unordered_map>
+#include <fstream>
 
 template<typename Derived, typename T>
 class ResourceManager{
@@ -67,12 +68,12 @@ private:
         return(itr != m_resources.end() ? &itr->second :nullptr);
     }
 
-    bool Unload(const std::string* l_id){
-    auto itr = m_resources.find(l_id);
-    if(itr == m_resources.end()){ return false;}
-    delete itr->second.first;
-    m_resources.erase(itr);
-    return true;
+    bool Unload(const std::string& l_id){
+        auto itr = m_resources.find(l_id);
+        if(itr == m_resources.end()){ return false;}
+        delete itr->second.first;
+        m_resources.erase(itr);
+        return true;
     }
 
     void LoadPaths(const std::string& l_pathFile){
