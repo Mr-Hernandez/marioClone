@@ -3,12 +3,14 @@
 #include <iostream>
 #include <vector>
 #include "EventManager.h"
+#include "SpriteSheet.h"
+#include "SharedContext.h"
 
 struct TimeInfo;
 
 class character{
 public:
-    character();
+    character(SharedContext* l_shared);
     ~character();
 
 //    void Update(std::vector<sf::Time>& l_timeInfo);
@@ -25,6 +27,9 @@ public:
 
 
 private:
+    SharedContext* m_shared;
+    SpriteSheet m_spriteSheet;
+
     sf::Texture m_charTexture;
     sf::Sprite m_charSprite;
 

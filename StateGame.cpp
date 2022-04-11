@@ -2,7 +2,8 @@
 #include "StateManager.h"
 
 StateGame::StateGame(StateManager* l_stateManager)
-    : BaseState(l_stateManager){}
+    : BaseState(l_stateManager),
+    m_character(m_stateMgr->GetContext()){}
 
 StateGame::~StateGame(){}
 

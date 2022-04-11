@@ -3,7 +3,8 @@
 
 
 Game::Game() : m_window(sf::Vector2u(1920,1080), "MariaClon"),
-               m_stateManager(&m_context)
+               m_stateManager(&m_context),
+               m_character(&m_context)
 {
 //    // I got the original size and store it, access like so
 //    std::cout << m_window.GetOrigWinSize().x <<

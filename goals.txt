@@ -38,4 +38,8 @@ Next
 Next
 - Write the .cfg file containing the texture assets list or paths or w/e
 - texture manager and sprite sheet stuff for animation
-
+Next
+- Find where the and how to load textures and such before moving to ch7
+- take a break
+Next
+- Load spritesheet and see how to get it working

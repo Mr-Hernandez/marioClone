@@ -2,7 +2,10 @@
 
 
 
-character::character(){
+character::character(SharedContext* l_shared)
+    : m_shared(l_shared),
+    m_spriteSheet(m_shared->m_textureManager)
+{
     m_charTexture.loadFromFile("Resources/characters/gary.png");
     m_charSprite.setTexture(m_charTexture);
 
